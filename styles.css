@@ -37,6 +37,8 @@ img { display: block; max-width: 100%; }
 .navin { max-width: 1180px; margin: 0 auto; height: 60px; padding: 0 20px; display: flex; align-items: center; gap: 24px; }
 .brand { display: flex; align-items: center; gap: 9px; font-family: var(--head); font-weight: 600; font-size: 19px; letter-spacing: -.01em; }
 .brand img { width: 30px; height: 30px; }
+.brand > span { display: flex; flex-direction: column; line-height: 1; }
+.brand small { margin-top: 3px; font-family: var(--body); font-size: 8.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
 .topnav nav { flex: 1; display: flex; justify-content: center; gap: 4px; }
 .topnav nav a { position: relative; padding: 8px 12px; font-size: 13px; color: var(--ink2); font-weight: 400; transition: color .15s; }
 .topnav nav a:hover { color: var(--ink); }
@@ -287,6 +289,10 @@ select { height: 38px; border-radius: 19px; border: 1px solid var(--line); backg
   .hstage { padding: 50px 150px 80px 70px; grid-template-columns: 1fr 1fr; }
 }
 
+@media (min-width: 861px) and (max-width: 940px) {
+  .brand small { display: none; }
+}
+
 /* ---------- Mobile ---------- */
 @media (max-width: 860px) {
   .only-m { display: inline-flex !important; }
@@ -351,4 +357,9 @@ select { height: 38px; border-radius: 19px; border: 1px solid var(--line); backg
   .three { grid-template-columns: 1fr 1fr; }
   .footbar { flex-direction: column; text-align: center; padding: 18px 16px; }
   .footbar nav { flex-wrap: wrap; justify-content: center; gap: 14px; }
+}
+
+@media (max-width: 400px) {
+  .brand small { line-height: 1.2; }
+  .brand small span { display: block; }
 }

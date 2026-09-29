@@ -62,7 +62,7 @@ export default function App() {
       <header className="topnav">
         <div className="navin">
           <button className="iconbtn only-m" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu"><Icon n={menuOpen ? 'close' : 'menu'} /></button>
-          <a href="#/" className="brand"><img src="/logo-mark.svg" alt="YB" /><span>YB</span></a>
+          <a href="#/" className="brand"><img src="/logo-mark.svg" alt="" /><span>YB<small><span>Lots de produits</span> <span>Amazon à prix fous</span></small></span></a>
           <nav className={menuOpen ? 'open' : ''}>
             {NAV.map((n) => (
               <a key={n.to} href={'#' + n.to} className={isActive(n.to) ? 'active' : ''}>{n.label}</a>
